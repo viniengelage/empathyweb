@@ -16,6 +16,7 @@ function Feature({ title, text, icon }: FeatureProps) {
         h={16}
         align="center"
         justify="center"
+        alignSelf="center"
         color="white"
         rounded="full"
         bg="gray.100"
@@ -23,15 +24,19 @@ function Feature({ title, text, icon }: FeatureProps) {
       >
         {icon}
       </Flex>
-      <Text fontWeight={600}>{title}</Text>
-      <Text color="gray.600">{text}</Text>
+      <Text fontWeight={600} fontSize="2xl" textAlign="center">
+        {title}
+      </Text>
+      <Text color="gray.600" fontSize="2xl" textAlign="center">
+        {text}
+      </Text>
     </Stack>
   );
 }
 
 export function Features() {
   return (
-    <Box p={4}>
+    <Box p={6}>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
         <Feature
           icon={<Icon as={FcAssistant} w={10} h={10} />}

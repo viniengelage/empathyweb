@@ -4,6 +4,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 
 export function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
   const handleToggle = () => (isOpen ? onClose() : onOpen());
 
   return (
@@ -22,9 +23,9 @@ export function Header() {
         <Image src="/logo.svg" alt="logo" h="8" />
       </Flex>
 
-      <Box display={{ base: "block", md: "none" }} onClick={handleToggle}>
+      {/* <Box display={{ base: "block", md: "none" }} onClick={handleToggle}>
         <HamburgerIcon />
-      </Box>
+      </Box> */}
 
       {/* <Stack
         direction={{ base: "column", md: "row" }}

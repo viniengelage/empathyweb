@@ -63,9 +63,7 @@ export function Section1() {
           alt="home-app"
           w="lg"
           bg="white"
-          // rounded="1rem"
-          // shadow="2xl"
-          // padding={8}
+          padding={8}
         />
       </Box>
     </Flex>
