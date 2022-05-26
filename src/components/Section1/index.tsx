@@ -12,6 +12,7 @@ export function Section1() {
       minH="70vh"
       px={8}
       mb={16}
+      mt={8}
     >
       <Stack
         spacing={4}
