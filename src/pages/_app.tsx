@@ -2,12 +2,18 @@ import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 
 import type { AppProps } from "next/app";
 
+import "@fontsource/poppins";
+
 const theme = extendTheme({
+  fonts: {
+    heading: `'Poppins', sans-serif`,
+    body: `'Poppins', sans-serif`,
+  },
   semanticTokens: {
     colors: {
       error: "red.500",
       success: "green.500",
-      background: "#BC74E9",
+      background: "#9E74D0",
       primary: {
         default: "#862bbe",
         _dark: "red.400",
