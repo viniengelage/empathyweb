@@ -60,7 +60,13 @@ export function Team() {
     <Container>
       <Box bg="background" w="full">
         <Stack py={16} spacing={12}>
-          <Stack spacing={0} align="center">
+          <Stack
+            spacing={0}
+            align="center"
+            color="white"
+            p={{ base: "0 16px" }}
+            textAlign="center"
+          >
             <Heading>Nosso time</Heading>
             <Text>Equipe por trás da criação e desenvolvimeno do PATH!</Text>
           </Stack>

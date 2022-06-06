@@ -37,10 +37,10 @@ export function Footer() {
             </Stack>
             <Stack align="flex-start">
               <ListHeader>Contato</ListHeader>
-              <Link href="/hey">Instituição</Link>
-              <Link href="/hey">Portifólio digital</Link>
-              <Link href="/hey">Github</Link>
-              <Link href="/hey">Linkedin</Link>
+              <Link href="https://uniamerica.br/">Instituição</Link>
+              <Link href="https://uniamerica.br/">Portifólio digital</Link>
+              {/* <Link href="/hey">Github</Link> */}
+              {/* <Link href="/hey">Linkedin</Link> */}
             </Stack>
           </SimpleGrid>
         </Stack>
