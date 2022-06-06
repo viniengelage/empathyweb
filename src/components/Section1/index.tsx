@@ -1,4 +1,12 @@
-import { Box, Button, Flex, Heading, Image, Stack } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Image,
+  Link,
+  Stack,
+} from "@chakra-ui/react";
 
 import { DownloadIcon } from "@chakra-ui/icons";
 
@@ -49,22 +57,21 @@ export function Section1() {
             mesmo perante os outros.
           </Heading>
 
-          <Button
-            borderRadius="8px"
-            py="4"
-            px="4"
-            lineHeight="1"
-            size="lg"
-            w="xs"
-            bg="button"
-            color="white"
-            _hover={{
-              bg: "button_hover",
-            }}
-          >
-            <DownloadIcon marginRight="2" />
-            Saiba mais
-          </Button>
+          <Link href="#about">
+            <Button
+              borderRadius="8px"
+              py="4"
+              px="4"
+              lineHeight="1"
+              size="lg"
+              w="xs"
+              bg="white"
+              color="background"
+            >
+              <DownloadIcon marginRight="2" />
+              Saiba mais
+            </Button>
+          </Link>
         </Stack>
 
         <Box w={{ base: "80%", sm: "60%", md: "50%" }} mb={{ base: 12, md: 0 }}>

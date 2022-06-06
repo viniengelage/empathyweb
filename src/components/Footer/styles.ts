@@ -20,8 +20,10 @@ export const Wave = styled.div`
 export const Svg = styled.svg`
   position: relative;
   display: block;
-  width: calc(290% + 1.3px);
-  height: 126px;
+  width: calc(300% + 1.3px);
+  height: 107px;
+
+  filter: drop-shadow(2px 3px 6px rgb(0 0 0 / 0.4));
 `;
 
 export const SvgPath = styled.path`

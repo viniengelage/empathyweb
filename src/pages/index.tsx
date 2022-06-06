@@ -8,6 +8,7 @@ import { Section1 } from "../components/Section1";
 import { Phone } from "../components/Phone";
 import { HowToWork } from "../components/HowToWork";
 import { Progress } from "../components/Progress";
+import { Header } from "../components/Header";
 import { Team } from "../components/Team";
 
 export default function Home() {
@@ -18,7 +19,8 @@ export default function Home() {
         <link rel="icon" type="image/png" href="/icon.ico" />
       </Head>
 
-      <Flex direction="column" align="center" m="0 auto" flex={1}>
+      <Flex direction="column" align="center" m="0 auto" flex={1} w="full">
+        <Header />
         <Section1 />
         <Phone />
         <HowToWork />

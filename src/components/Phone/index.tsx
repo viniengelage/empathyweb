@@ -10,6 +10,7 @@ export function Phone() {
         alignItems="center"
         justifyContent="center"
         shadow="base"
+        id="about"
       >
         <Flex
           align="center"
@@ -19,7 +20,7 @@ export function Phone() {
           minH="70vh"
           px={8}
           mb={16}
-          marginTop={16}
+          mt={{ base: 32, md: 16 }}
           maxW={{ xl: "1200px" }}
         >
           <Image src="/phone-circle.svg" alt="home-app" h="container.sm" />

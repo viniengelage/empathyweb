@@ -22,6 +22,8 @@ export const Svg = styled.svg`
   display: block;
   width: calc(111% + 1.3px);
   height: 157px;
+
+  filter: drop-shadow(2px 3px 6px rgb(0 0 0 / 0.4));
 `;
 
 export const SvgPath = styled.path`

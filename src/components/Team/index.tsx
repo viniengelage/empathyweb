@@ -1,89 +1,85 @@
+import { ReactNode, useCallback, useEffect, useMemo, useState } from "react";
 import {
   Box,
-  SimpleGrid,
+  Flex,
+  Heading,
   Text,
   Stack,
-  Flex,
-  Image,
-  Heading,
+  Avatar,
+  useColorModeValue,
+  Link,
+  SimpleGrid,
 } from "@chakra-ui/react";
+import axios from "axios";
 import { Container, Svg, SvgPath, Wave } from "./styles";
+import { MemberCard } from "../MemberCard";
 
-interface AvatarProps {
-  title: string;
-  text: string;
+interface IGitHubUserProps {
+  name: string;
   avatarUrl: string;
-}
-
-function Avatar({ title, text, avatarUrl }: AvatarProps) {
-  return (
-    <Stack>
-      <Flex
-        w={32}
-        h={32}
-        align="center"
-        justify="center"
-        alignSelf="center"
-        color="white"
-        rounded="full"
-        bg="white"
-        boxShadow="md"
-      >
-        <Image src={avatarUrl} alt="icon-image" w={32} rounded="full" />
-      </Flex>
-      <Text fontWeight={600} color="white" fontSize="xl" textAlign="center">
-        {title}
-      </Text>
-      <Text color="white" lineHeight="6" fontSize="xl" textAlign="center">
-        {text}
-      </Text>
-    </Stack>
-  );
+  bio: string;
+  profileUrl: string;
 }
 
 export function Team() {
+  const [devMembers, setDevMembers] = useState<IGitHubUserProps[]>([]);
+
+  const devMembersGitUsername = useMemo(
+    () => [
+      "viniengelage",
+      "ghellereluisa",
+      "Fernando-Fritzen",
+      "sundaeraul",
+      "laerciomlb",
+    ],
+    [],
+  );
+
+  const handleGetMembers = useCallback(async () => {
+    const apiCalls = devMembersGitUsername.map(devMemberUsername =>
+      axios.get(`https://api.github.com/users/${devMemberUsername}`),
+    );
+
+    const results = await Promise.all(apiCalls);
+
+    const formatedDevs: IGitHubUserProps[] = results.map(({ data }) => ({
+      name: data.name,
+      avatarUrl: data.avatar_url,
+      bio: data.bio,
+      profileUrl: data.html_url,
+    }));
+
+    setDevMembers(formatedDevs);
+  }, [devMembersGitUsername]);
+
+  useEffect(() => {
+    handleGetMembers();
+  }, [handleGetMembers]);
+
   return (
     <Container>
-      <Box
-        bg="purple.400"
-        display="flex"
-        width="full"
-        alignItems="center"
-        justifyContent="center"
-        shadow="base"
-        p={8}
-      >
-        <Box
-          p={6}
-          alignItems="center"
-          justifyContent="center"
-          maxW={{ xl: "1200px" }}
-          mt={8}
-        >
-          <Heading textAlign="center" p={8} color="white">
-            Time de desenvolvimento
-          </Heading>
-
-          <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
-            <Avatar
-              avatarUrl="https://avatars.githubusercontent.com/u/50602159?v=4"
-              title="Vinicios Engelage"
-              text="Desenvolvedor FullStack"
-            />
-
-            <Avatar
-              avatarUrl="https://avatars.githubusercontent.com/u/49946934?v=4"
-              title="Laércio Bubiak"
-              text="DevOps"
-            />
-
-            <Avatar
-              avatarUrl="https://avatars.githubusercontent.com/u/64644028?v=4"
-              title="Fernando"
-              text="Frontend"
-            />
+      <Box bg="background" w="full">
+        <Stack py={16} spacing={12}>
+          <Stack spacing={0} align="center">
+            <Heading>Nosso time</Heading>
+            <Text>Equipe por trás da criação e desenvolvimeno do PATH!</Text>
+          </Stack>
+          <SimpleGrid
+            templateColumns={{ sm: "1fr 1fr", md: "1fr 1fr 1fr" }}
+            spacing={10}
+            maxW={{ md: "1200px" }}
+            alignSelf="center"
+          >
+            {devMembers.map(member => (
+              <MemberCard
+                imageUrl={member.avatarUrl}
+                name={member.name}
+                description={member.bio}
+                profileLink={member.profileUrl}
+              />
+            ))}
           </SimpleGrid>
-        </Box>
+        </Stack>
       </Box>
       <Wave>
         <Svg

@@ -5,7 +5,13 @@ import { Container, Svg, SvgPath, Wave } from "./styles";
 export function Progress() {
   return (
     <Container>
-      <Box w="full" display="flex" alignItems="center" justifyContent="center">
+      <Box
+        w="full"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        id="progress"
+      >
         <Flex
           align="center"
           justify={{ base: "center", md: "space-around", xl: "space-between" }}

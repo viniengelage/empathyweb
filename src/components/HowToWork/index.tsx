@@ -11,6 +11,7 @@ export function HowToWork() {
         alignItems="center"
         justifyContent="center"
         bg="background"
+        id="how-to-work"
       >
         <Flex
           align="center"
