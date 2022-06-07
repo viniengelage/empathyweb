@@ -42,15 +42,15 @@ export function Section1() {
             color="white"
             textAlign={["center", "center", "left", "left"]}
           >
-            PATH
+            Um caminho para empatia
           </Heading>
           <Heading
             as="h2"
             color="white"
             opacity="0.8"
-            fontSize="24px"
+            fontSize="22px"
             fontWeight="light"
-            lineHeight={1.6}
+            lineHeight={1.5}
             textAlign={["center", "center", "left", "left"]}
           >
             Aprenda mais sobre a empatia, e como desenvolve-lá para evoluir a si
