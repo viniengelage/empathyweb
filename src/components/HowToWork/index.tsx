@@ -53,7 +53,14 @@ export function HowToWork() {
               pontos, as flores em seu jardim.
             </Heading>
           </Stack>
-          <Image src="/how-to-work.svg" alt="home-app" h="container.sm" />
+          <Image
+            src="/how-to-work.svg"
+            alt="home-app"
+            h="container.sm"
+            style={{
+              filter: "drop-shadow(2px 3px 6px rgb(0 0 0 / 0.2))",
+            }}
+          />
         </Flex>
       </Box>
       <Wave>

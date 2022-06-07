@@ -23,7 +23,14 @@ export function Phone() {
           mt={{ base: 32, md: 16 }}
           maxW={{ xl: "1200px" }}
         >
-          <Image src="/phone-circle.svg" alt="home-app" h="container.sm" />
+          <Image
+            src="/phone-circle.svg"
+            alt="home-app"
+            h="container.sm"
+            style={{
+              filter: "drop-shadow(2px 3px 6px rgb(0 0 0 / 0.2))",
+            }}
+          />
           <Stack
             spacing={4}
             w={{ base: "80%", md: "50%" }}
