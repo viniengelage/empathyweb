@@ -11,6 +11,8 @@ import { Progress } from "../components/Progress";
 import { Header } from "../components/Header";
 import { Team } from "../components/Team";
 
+import openGraphImg from "../assets/opengraph-path.png";
+
 export default function Home() {
   return (
     <>
@@ -31,13 +33,13 @@ export default function Home() {
           content="https://empathyweb.vercel.app/"
           key="ogurl"
         />
-        <meta property="og:image" content="/opengraph-path.png" key="ogimage" />
-        <meta property="og:site_name" content="PATH" key="ogsitename" />
         <meta
-          property="og:title"
-          content="Um caminho para empatia"
-          key="ogtitle"
+          property="og:image"
+          content={openGraphImg as unknown as string}
+          key="ogimage"
         />
+        <meta property="og:site_name" content="PATH" key="ogsitename" />
+        <meta property="og:title" content="Home" key="ogtitle" />
         <meta
           property="og:description"
           content="Aprenda o que é e como desenvolver empatia"
