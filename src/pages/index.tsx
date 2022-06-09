@@ -18,13 +18,31 @@ export default function Home() {
         <title>Path</title>
         <link rel="icon" type="image/png" href="/icon.ico" />
 
-        <meta property="og:title" content="PATH - Um caminho para empatia" />
-        <meta property="og:image" content="/opengraph-path.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary" key="twcard" />
+        <meta name="twitter:creator" content="PATH" key="twhandle" />
+
+        {/* Open Graph */}
+        <meta
+          property="og:url"
+          content="https://empathyweb.vercel.app/"
+          key="ogurl"
+        />
+        <meta property="og:image" content="/opengraph-path.png" key="ogimage" />
+        <meta property="og:site_name" content="PATH" key="ogsitename" />
+        <meta
+          property="og:title"
+          content="Um caminho para empatia"
+          key="ogtitle"
+        />
         <meta
           property="og:description"
           content="Aprenda o que é e como desenvolver empatia"
+          key="ogdesc"
         />
-        <meta property="og:url" content="https://empathyweb.vercel.app/" />
       </Head>
 
       <Flex direction="column" align="center" m="0 auto" flex={1} w="full">
