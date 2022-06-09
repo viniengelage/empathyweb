@@ -16,7 +16,15 @@ class MyDocument extends Document {
   render() {
     return (
       <Html className="scroll-smoth" style={{ scrollBehavior: "smooth" }}>
-        <Head />
+        <Head>
+          <meta property="og:title" content="PATH - Um caminho para empatia" />
+          <meta property="og:image" content="/opengraph-path.png" />
+          <meta
+            property="og:description"
+            content="Aprenda o que é e como desenvolver empatia"
+          />
+          <meta property="og:url" content="https://empathyweb.vercel.app/" />
+        </Head>
         <body>
           <Main />
           <NextScript />
