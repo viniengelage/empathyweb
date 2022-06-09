@@ -55,6 +55,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           content="Aprenda o que é e como desenvolver empatia"
           key="ogdesc"
         />
+
+        <meta property="og:image:width" content="1200" />
+
+        <meta property="og:image:height" content="630" />
       </Head>
       <Component {...pageProps} />
     </ChakraProvider>
