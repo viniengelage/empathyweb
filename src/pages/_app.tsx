@@ -45,14 +45,15 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta
           property="og:image"
-          content="https://i.ibb.co/2qXfPS3/opengraph-path.png"
+          content="https://empathyweb.vercel.app/opengraph-path.png"
           key="ogimage"
         />
+
         <meta property="og:site_name" content="PATH" key="ogsitename" />
         <meta property="og:title" content="Home" key="ogtitle" />
         <meta
           property="og:description"
-          content="Aprenda o que é e como desenvolver empatia"
+          content="Entenda o que é empatia, e como desenvolve-lá de uma forma amigável. Complete desafios e ganhe pontos para evoluir dentro de sua jornada"
           key="ogdesc"
         />
 
