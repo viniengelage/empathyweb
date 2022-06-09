@@ -11,8 +11,6 @@ import { Progress } from "../components/Progress";
 import { Header } from "../components/Header";
 import { Team } from "../components/Team";
 
-import openGraphImg from "../assets/opengraph-path.png";
-
 export default function Home() {
   return (
     <>
@@ -22,29 +20,6 @@ export default function Home() {
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary" key="twcard" />
-        <meta name="twitter:creator" content="PATH" key="twhandle" />
-
-        {/* Open Graph */}
-        <meta
-          property="og:url"
-          content="https://empathyweb.vercel.app/"
-          key="ogurl"
-        />
-        <meta
-          property="og:image"
-          content={openGraphImg as unknown as string}
-          key="ogimage"
-        />
-        <meta property="og:site_name" content="PATH" key="ogsitename" />
-        <meta property="og:title" content="Home" key="ogtitle" />
-        <meta
-          property="og:description"
-          content="Aprenda o que é e como desenvolver empatia"
-          key="ogdesc"
-        />
       </Head>
 
       <Flex direction="column" align="center" m="0 auto" flex={1} w="full">

@@ -3,6 +3,7 @@ import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import type { AppProps } from "next/app";
 
 import "@fontsource/poppins";
+import Head from "next/head";
 
 const theme = extendTheme({
   fonts: {
@@ -31,6 +32,30 @@ const theme = extendTheme({
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
+      <Head>
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary" key="twcard" />
+        <meta name="twitter:creator" content="PATH" key="twhandle" />
+
+        {/* Open Graph */}
+        <meta
+          property="og:url"
+          content="https://empathyweb.vercel.app/"
+          key="ogurl"
+        />
+        <meta
+          property="og:image"
+          content="https://i.ibb.co/2qXfPS3/opengraph-path.png"
+          key="ogimage"
+        />
+        <meta property="og:site_name" content="PATH" key="ogsitename" />
+        <meta property="og:title" content="Home" key="ogtitle" />
+        <meta
+          property="og:description"
+          content="Aprenda o que é e como desenvolver empatia"
+          key="ogdesc"
+        />
+      </Head>
       <Component {...pageProps} />
     </ChakraProvider>
   );
