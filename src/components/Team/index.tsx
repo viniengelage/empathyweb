@@ -31,6 +31,7 @@ export function Team() {
       "Fernando-Fritzen",
       "sundaeraul",
       "laerciomlb",
+      "txsoura",
     ],
     [],
   );
