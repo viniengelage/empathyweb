@@ -29,7 +29,6 @@ export function Team() {
       "viniengelage",
       "ghellereluisa",
       "Fernando-Fritzen",
-      "sundaeraul",
       "laerciomlb",
       "txsoura",
     ],
